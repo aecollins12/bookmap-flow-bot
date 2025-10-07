@@ -1,0 +1,22 @@
+broker: simulated
+symbol: BTCUSDT
+update_interval: 0.5
+imbalance_threshold: 0.3
+delta_threshold: 1.0
+liquidity_wall_threshold: 4.0
+signal_expiry: 5.0
+default_stop_distance: 1.0
+mode: trend
+risk:
+  starting_equity: 100000
+  max_risk_per_trade: 0.01
+  max_drawdown: 0.05
+execution:
+  csv_path: data/trade_log.csv
+  db_path: data/execution.db
+dashboards:
+  enabled: true
+ml:
+  enabled: false
+  model_path: models/deeplob.pth
+  threshold: 0.6

@@ -1,0 +1,9 @@
+aiosqlite>=0.18.0
+numpy>=1.23
+plotly>=5.15
+Flask>=2.3
+Flask-SocketIO>=5.3
+python-dotenv>=1.0
+PyYAML>=6.0
+torch>=2.0
+pandas>=2.0
