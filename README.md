@@ -47,13 +47,20 @@ requirements.txt
    - Edit `.env` with your API keys and broker selection (`simulated`, `binance`, etc.).
    - Update `config.yaml` for symbol, thresholds, execution settings, and risk parameters.
 
-3. **Run the Bot**
+3. **Launch the services**
 
    ```bash
+   export $(cat .env | xargs)  # or use a dotenv loader in your shell
    python main.py --config config.yaml
    ```
 
-   The dashboard launches automatically on http://localhost:5000. Use the Start/Pause/Stop buttons to control streaming updates.
+   The command starts the asyncio event loop, spins up the data feed, strategy, execution engine, and brings the Flask dashboard online at http://localhost:5000.
+
+4. **Interact with the bot**
+
+   - Open the dashboard in a browser to monitor the heatmap, signals, and P&L in real time.
+   - Use the **Start**, **Pause**, and **Stop** buttons to control streaming updates and trading activity.
+   - Logs and databases are written to the `data/` directory while the bot is running.
 
 ## Machine Learning Filter
 
